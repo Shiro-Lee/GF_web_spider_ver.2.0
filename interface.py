@@ -147,7 +147,7 @@ def run():
         flags.ua = get_ua()
         page_html = get_page_html(page_url, flags.ua)
     except urllib.request.HTTPError:
-        showwarning('哦豁', '你老婆的名字错啦（或者该人形页面暂不存在）')
+        showwarning('错误', '人形名称不正确（或者该人形页面暂不存在）')
         name_ent.config(state=NORMAL)
         confirm_but.config(state=NORMAL)
     else:
